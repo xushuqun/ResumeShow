@@ -43,22 +43,22 @@
 						<h2>主题系列文案（点图查看全部）</h2>
 						<div class="row">
 							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb img-long" style="height: 504px;"><img src="images/thumbs/01.jpg" alt="" /></a>
+								<a id="long1" href="images/fulls/01.jpg" class="image fit thumb img-long" style="height: 504px;"><img src="images/thumbs/01.jpg" alt="" /></a>
 								<h3>Magna sed consequat tempus</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb img-long" style="height: 573px;"><img src="images/thumbs/02.jpg" alt="" /></a>
+								<a id="long2" href="images/fulls/02.jpg" class="image fit thumb img-long" style="height: 573px;"><img src="images/thumbs/02.jpg" alt="" /></a>
 								<h3>Ultricies lacinia interdum</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb img-long" style="height: 473px;"><img src="images/thumbs/03.jpg" alt="" /></a>
+								<a id="long3" href="images/fulls/03.jpg" class="image fit thumb img-long" style="height: 473px;"><img src="images/thumbs/03.jpg" alt="" /></a>
 								<h3>Tortor metus commodo</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb img-long" style="height: 323px;"><img src="images/thumbs/04.jpg" alt="" /></a>
+								<a id="long4" href="images/fulls/04.jpg" class="image fit thumb img-long" style="height: 323px;"><img src="images/thumbs/04.jpg" alt="" /></a>
 								<h3>Tortor metus commodo</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
@@ -138,4 +138,21 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+	<script type="text/javascript">
+	if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+		var rat = window.screen.width*1.34;
+
+		var h_1 = rat;
+		var h_2 = rat*573/504;
+		var h_3 = rat*473/504;
+		var h_4 = rat*323/504;
+
+		$('#long1').css('height',h_1);
+		$('#long2').css('height',h_2);
+		$('#long3').css('height',h_3);
+		$('#long4').css('height',h_4);
+	}else{
+		$('.img-long').css('height','670px');
+	}
+	</script>
 </html>
